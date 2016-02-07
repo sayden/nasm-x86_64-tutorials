@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Use './run [file.asm]'"
+echo ""
+
+NAME=${1%.*}
+
+nasm -f elf64 -o $NAME.o $1
+ld -o $NAME $NAME.o
+
+# echo ""
