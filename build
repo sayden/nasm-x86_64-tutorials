@@ -7,5 +7,6 @@ NAME=${1%.*}
 
 nasm -f elf64 -o $NAME.o $1
 ld -o $NAME $NAME.o
+rm $NAME.o
 
 # echo ""
