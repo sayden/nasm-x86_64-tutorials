@@ -1,4 +1,3 @@
-;initialized data section
 section .data
   ;define constants
   num1: equ 100

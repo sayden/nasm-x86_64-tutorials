@@ -1,10 +1,13 @@
+%include "io64.inc"
+
 section .data
   msg db "hello, world!"
 
 section .text
-  global _start
+  global CMAIN
 
-_start:
+CMAIN:
+    mov rbp, rsp; for correct debugging
   mov     rax, 1
   mov     rdi, 1
   mov     rsi, msg
