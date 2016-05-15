@@ -6,8 +6,8 @@
     .long 3,67,34,222,45,75,54,34,44,33,22,11,66,min_number
 
 .section .text
-  .globl _start
 
+.globl _start
 _start:
   movl $0, %edi
   movl data_items(,%edi,4), %eax # load the first byte of data
