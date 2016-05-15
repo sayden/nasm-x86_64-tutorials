@@ -13,5 +13,7 @@ _start:
   int $0x80
 
 sum:
+  pushq   %rbp               # Standard function stuff. We have to restore %rbp to its
+                             # previous state before returning so we push it now
   addl %ecx, %ebx
   ret
